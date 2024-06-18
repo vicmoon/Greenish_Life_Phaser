@@ -21,12 +21,13 @@ const game = new Phaser.Game(config);
 
 function preload() {
   this.load.image("greenish", "assets/greenish.png");
-  this.load.image("world", "assets/bluePlanet.jpg");
+  this.load.image("blueworld", "assets/bluePlanet.jpg");
+  this.load.image("greenworld", "assets/planet.jpg");
 }
 
 function create() {
-  this.add.image(400, 300, "world");
   this.add.image(400, 300, "greenish");
+  this.add.text;
 }
 
 function update() {}
