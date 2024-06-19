@@ -3,10 +3,15 @@ import Phaser from "phaser";
 import { Scene } from "phaser";
 
 export class TitleSceen extends Scene {
-  preload() {}
+  preload() {
+    this.load.image("blueworld", "assets/bluePlanet.jpg");
+    this.load.image("greenworld", "assets/planet.jpg");
+  }
 
   create() {
-    const text = this.add.text(400, 250, "Hello, I'm Greenish!");
-    text.setOrigin(0.5, 0.5);
+    this.add.image(centerX, centerY, "greenworld");
+
+    text.setOrigin(centerX, centerY);
   }
 }
+screenTop;

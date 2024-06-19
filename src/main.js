@@ -8,16 +8,19 @@ import { Game } from "./scenes/Game";
 
 var config = {
   type: Phaser.AUTO,
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: 800,
+  height: 600,
+  physics: {
+    default: "arcade",
+    arcade: {
+      gravity: { y: 100 },
+      debug: true,
+    },
+  },
   scene: {
     preload: preload,
     create: create,
     update: update,
-  },
-  scale: {
-    mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH,
   },
 };
 
@@ -30,20 +33,13 @@ function preload() {
 }
 
 function create() {
-  const centerX = this.cameras.main.centerX;
-  const centerY = this.cameras.main.centerY;
-  this.add.image(centerX, centerY, "greenworld");
-  this.add.image(centerX, centerY, "greenish");
+  this.add.image(400, 300, "greenish");
+  this.add.text;
 }
 
 function update() {}
 
 // game.scene.add("titlescreen", TitleSceen);
-// game.scene.add("game", Game);
+game.scene.add("game", Game);
 
 game.scene.start("game");
-
-// Resize the game when the window is resized
-window.addEventListener("resize", () => {
-  game.scale.resize(window.innerWidth, window.innerHeight);
-});
