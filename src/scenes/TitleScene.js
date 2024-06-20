@@ -4,11 +4,11 @@ export class TitleScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("blueworld", "assets/background.jpg");
+    this.load.image("greenish", "assets/greenish.png");
   }
 
   create() {
-    this.add.image(400, 300, "blueworld");
+    this.add.image(400, 300, "greenish");
 
     this.input.once(
       "pointerdown",
