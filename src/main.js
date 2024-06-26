@@ -8,7 +8,8 @@ const config = {
   type: Phaser.AUTO,
   width: 800,
   height: 600,
-  scene: [TitleScene, MenuScene, GameScene],
+  parent: "phaser-container",
+  scene: [MenuScene, TitleScene, GameScene],
 };
 
 const game = new Phaser.Game(config);

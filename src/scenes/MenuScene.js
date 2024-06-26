@@ -4,18 +4,14 @@ export class MenuScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.text(
-      100,
-      300,
-      "Hello, I am Greenish and this is my world! Help me find my red ball!",
-      {
-        fill: "#fff",
-      }
-    );
+    this.add.text(400, 300, "Press space to start", {
+      fill: "#fff",
+      className: "menu-text",
+    });
     this.input.once(
       "pointerdown",
       () => {
-        this.scene.start("GameScene"); // Transition to GameScene on click
+        this.scene.start("TitleScene");
       },
       this
     );

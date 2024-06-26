@@ -1,6 +1,6 @@
 export class TitleScene extends Phaser.Scene {
   constructor() {
-    super({ key: "TitleScene" }); // Correct usage: key as a string
+    super({ key: "TitleScene" });
   }
 
   preload() {
@@ -9,11 +9,14 @@ export class TitleScene extends Phaser.Scene {
 
   create() {
     this.add.image(400, 300, "greenish");
+    this.add.text(100, 300, "I'm Greenish", {
+      fill: "#fff",
+    });
 
     this.input.once(
       "pointerdown",
       () => {
-        this.scene.start("MenuScene");
+        this.scene.start("GameScene");
       },
       this
     );
